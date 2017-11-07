@@ -25,6 +25,12 @@ def interactive_console(mainmodule=None, quiet=False, future_flags=0):
             print(text)
         except ImportError:
             pass
+        except MemoryError:
+            if sys.pypy_translation_info['translation.sandbox']:
+                print("sandbox: _pypy_irc_topic has a forbidden import")
+                pass
+            else:
+                raise
     #
     try:
         if not os.isatty(sys.stdin.fileno()):
