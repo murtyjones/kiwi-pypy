@@ -1,0 +1,1 @@
+python ./pypy/sandbox/pypy_interact.py pypy-c
