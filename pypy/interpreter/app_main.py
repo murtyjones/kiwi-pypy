@@ -586,7 +586,7 @@ def run_command_line(interactive,
         try:
             import site
         except:
-            print >> sys.stderr, "'import site' failed"
+            # print >> sys.stderr, "'import site' failed"
 
     set_stdio_encodings(ignore_environment)
 
