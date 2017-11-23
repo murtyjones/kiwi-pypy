@@ -132,7 +132,7 @@ def get_additional_entrypoints(space, w_initstdio):
                 try:
                     import site
                 except Exception as e:
-                    sys.stderr.write("'import site' failed:\n")
+                    # sys.stderr.write("'import site' failed:\n")
                     import traceback
                     traceback.print_exc()
             """)
